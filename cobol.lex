@@ -1,7 +1,7 @@
 
 %{
 #include<stdio.h>
-#include "coco.tab.h"
+#include "cobol.tab.h"
 
 %}
 pre #.*
