@@ -501,8 +501,12 @@ working_storage_section
 record_entry_block
     :TOK_INTEGER TOK_IDENTIFIER TOK_PICTURE TOK_INTEGER TOK_VALUE inc
 	 TOK_PERIOD
+/* 
+	JPC : remove possibility to unset value !
+
 	|TOK_INTEGER TOK_IDENTIFIER TOK_PICTURE TOK_INTEGER 
 	TOK_PERIOD
+*/
 	|record_level record_entry_block_pl
 	|
 	;
@@ -516,8 +520,10 @@ record_level
 
     :TOK_INTEGER TOK_IDENTIFIER TOK_PICTURE TOK_INTEGER TOK_VALUE inc
 	 TOK_PERIOD
+/*
 	|TOK_INTEGER TOK_IDENTIFIER TOK_PICTURE TOK_INTEGER 
 	TOK_PERIOD
+*/
 	|integer level_name TOK_PICTURE TOK_STRING
 	TOK_COMP TOK_VALUE TOK_INTEGER TOK_PERIOD
 	|integer level_name record_new_or_redef TOK_PERIOD
@@ -1258,7 +1264,7 @@ yyparse();
 int yyerror(char *msg)
 {
 int m=yylineno;
-printf("\n syntax error found at line number %d",m);
+printf("\n syntax error found at line number %d\n",m);
 return 0;
 }
 int yywrap()
