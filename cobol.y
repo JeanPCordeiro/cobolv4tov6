@@ -1257,14 +1257,14 @@ identifier
 	%%
 void main()
 {
-printf("welcome to cobol compiler\n");
+printf("IBM Cobol v4 to v6 preprocessor\n");
 yyin=fopen("input.cbl","r");
 yyparse();
 }
 int yyerror(char *msg)
 {
 int m=yylineno;
-printf("\n syntax error found at line number %d\n",m);
+printf("\nSyntax Error found at line number %d\n",m);
 return 0;
 }
 int yywrap()
