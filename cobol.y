@@ -171,6 +171,7 @@ extern int yylineno;
 %token TOK_HEADING
 %token TOK_HIGHLIGHT
 %token TOK_HIGH_VALUE
+%token TOK_IBM370
 %token TOK_IDENTIFICATION
 %token TOK_IDENTIFIER
 %token TOK_IF
@@ -388,7 +389,8 @@ extern int yylineno;
 pgm: program  {printf(" THE PROGRAM IS VALID \n");exit(0);}
 program
 	: identification_division 
-	  environment_division 
+	  environment_division
+	  configuration_section
 	  data_division 
 	  procedure_division 
 	  
@@ -443,9 +445,6 @@ optional_program
 	;
 
 	
-
-	
-	
 	
 	/* ###############################################
 	this is the end of identification_division 
@@ -461,7 +460,23 @@ environment_division
 	this is the end of environment_division 
 ###################################################	*/
 	
+
+/* JPC : add configuration_section */
+
+configuration_section
+	: TOK_CONFIGURATION TOK_SECTION TOK_PERIOD configuration_list
+	;
 	
+	configuration_list
+	: TOK_SOURCE_COMPUTER TOK_PERIOD TOK_IBM370 TOK_PERIOD
+	  TOK_OBJECT_COMPUTER TOK_PERIOD TOK_IBM370 TOK_PERIOD
+	;
+	
+	/*###############################################
+	this is the end of configuration_section
+###################################################	*/
+	
+
 	
 	
 data_division

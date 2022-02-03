@@ -177,6 +177,7 @@ pre #.*
 "highlight"		{ return (TOK_HIGHLIGHT);	}
 "i-o"			{ return (TOK_I_O);	}
 "i-o-control"		{ return (TOK_I_O_CONTROL);	}
+"ibm-370"		{ return (TOK_IBM370);	}
 "identification"		{ return (TOK_IDENTIFICATION);	}
 "if"			{ return (TOK_IF);	}
 "in"			{ return (TOK_IN);	}
