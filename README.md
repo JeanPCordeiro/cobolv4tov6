@@ -6,10 +6,10 @@ IBM COBOL v4 to v6 pre-processor
 The base of this work is the Cobol Syntax Checker by Eden Melaku Mulugeta (https://github.com/EdenMelaku/Cobol_Syntax_Checker.git)
 Many thanks to Eden !
 
-# Changes to syntax
+## Changes to syntax
 1) Add CONFIGURATION SECTION with SOURCE-COMPUTER and OBJECT-COMPUTER to IBM-370
 
 
-# Rules applied
+## Rules applied
 1) Variable defined without value
 
