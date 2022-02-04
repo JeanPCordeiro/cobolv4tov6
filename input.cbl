@@ -7,12 +7,10 @@
        DATA DIVISION.
        WORKING-STORAGE SECTION.
        01      WW00-CDBGD3.
-          05   WW00-ZN002
-                        PICTURE 9(2).
+          05   WW00-ZN002 PICTURE 9.
           05   WW00-CDBG1
                         PICTURE 999.
-       01      WW00-DATCE
-                        PICTURE X(8).
+       01      WW00-DATCE PICTURE X.
        01      WW00-CLERIB1.
           05   WW00-CDETA0
                         PICTURE 9(5).
